@@ -1,0 +1,66 @@
+.alianzas-de-amor {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .breadcrumb {
+    margin: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .productos .producto-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .productos .producto-card:hover {
+    transform: scale(1.05);
+  }
+
+  .paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .paginacion span {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .paginacion span:hover {
+    background-color: #f5f5f5;
+  }
+  

@@ -1,0 +1,52 @@
+.pie-pagina {
+    background-color: #f8f8f8;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .pie-pagina h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .pie-pagina ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pie-pagina ul li {
+    margin-bottom: 8px;
+  }
+  
+  .pie-pagina ul li a {
+    text-decoration: none;
+    color: #004d40;
+  }
+  
+  .pie-pagina ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .contacto p {
+    margin: 5px 0;
+  }
+  
+  .redes-sociales {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .redes-sociales i {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .redes-sociales i:hover {
+    color: #004d40;
+  }
+  

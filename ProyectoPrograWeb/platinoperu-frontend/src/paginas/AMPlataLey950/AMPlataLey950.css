@@ -1,0 +1,51 @@
+.am-plata-ley {
+    font-family: Arial, sans-serif;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    margin: 10px 20px;
+    color: #777;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .paginacion span:hover {
+    text-decoration: underline;
+  }
+  

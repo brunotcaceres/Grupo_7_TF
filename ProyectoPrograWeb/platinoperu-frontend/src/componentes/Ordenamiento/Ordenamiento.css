@@ -1,0 +1,30 @@
+.ordenamiento {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .ordenamiento select {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .ordenamiento select:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  .ordenamiento::after {
+    content: '▼'; /* Icono de dropdown */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+  }
+  

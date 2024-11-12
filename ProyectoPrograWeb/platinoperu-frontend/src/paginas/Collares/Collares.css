@@ -1,0 +1,51 @@
+.collaes {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .breadcrumb {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10%;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 10%;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .paginacion span.active {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,51 @@
+.para-el {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    margin: 10px 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .paginacion span:hover {
+    text-decoration: underline;
+  }
+  

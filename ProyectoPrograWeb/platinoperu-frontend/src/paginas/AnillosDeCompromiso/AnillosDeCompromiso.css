@@ -1,0 +1,52 @@
+.anillo-compromiso {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .breadcrumb {
+    margin: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 28px;
+    margin: 10px 0 30px;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .paginacion span {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .paginacion span:hover {
+    background-color: #f5f5f5;
+  }

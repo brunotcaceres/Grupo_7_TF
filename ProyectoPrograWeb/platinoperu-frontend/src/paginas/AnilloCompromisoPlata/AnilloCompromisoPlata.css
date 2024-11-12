@@ -1,0 +1,49 @@
+.anillo-compromiso-plata {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .breadcrumb {
+    margin: 20px;
+    font-size: 14px;
+    color: #7d7d7d;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0 20px;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .paginacion span {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .pagina-actual {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+  }
+  

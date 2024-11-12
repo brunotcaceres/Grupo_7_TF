@@ -1,0 +1,50 @@
+.matrimonio {
+    font-family: 'Arial', sans-serif;
+}
+
+.breadcrumb {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.paginacion {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.paginacion span:hover {
+    color: #d4af37; /* Gold color */
+}

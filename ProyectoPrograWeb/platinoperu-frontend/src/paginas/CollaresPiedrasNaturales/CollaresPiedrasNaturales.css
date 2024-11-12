@@ -1,0 +1,45 @@
+.collares-piedras-naturales {
+    padding: 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  

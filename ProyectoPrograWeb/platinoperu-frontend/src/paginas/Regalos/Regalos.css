@@ -1,0 +1,52 @@
+.regalos {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .breadcrumb {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .filtro-orden {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .paginacion span {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagina-activa {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+  }
+  

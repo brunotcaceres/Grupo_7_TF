@@ -1,0 +1,101 @@
+.barra-navegacion {
+  background-color: #004d40; /* Fondo verde oscuro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px; /* Reducir padding horizontal */
+  height: 60px; /* Altura compacta */
+  color: white;
+  position:initial; /* Fijar la barra en la parte superior */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem; /* Tamaño del texto del logo */
+  font-weight: bold;
+  color: white;
+  margin: 0; /* Eliminar margen */
+  line-height: 100px; /* Centrar verticalmente el texto en la barra */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Separación entre los elementos del menú */
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  line-height: 60px; /* Centrar verticalmente el texto del menú */
+}
+
+.iconos {
+  display: flex;
+  gap: 15px; /* Espacio entre íconos */
+  align-items: center;
+}
+
+.iconos i {
+  font-size: 1.2rem; /* Ajustar tamaño de los íconos */
+  cursor: pointer;
+}
+
+/* Corrección de los íconos que no se ven */
+.iconos i::before {
+  margin: 0; /* Asegurarse de que no haya margen adicional en los íconos */
+}
+
+.submenu {
+  position: absolute;
+  top: 50px; /* Ajustar posición del submenú debajo de la barra */
+  left: 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.submenu-column {
+  width: 150px;
+}
+
+.submenu h4 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.carrito-popup {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  text-align: center;
+  color: black;
+}
+
+.menu li:hover .submenu {
+  display: flex;
+}
+
+.submenu {
+  display: none;
+}

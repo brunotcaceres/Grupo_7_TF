@@ -1,0 +1,56 @@
+.compromiso {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hero {
+    background-image: url('/imagenes/compromiso-banner.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-ver-coleccion {
+    padding: 10px 20px;
+    background-color: #004225;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .informacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  .info-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,28 @@
+.inicio {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .productos-destacados {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .productos-destacados h2 {
+    margin-bottom: 10px;
+  }
+  
+  .testimonios {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .testimonios h2 {
+    margin-bottom: 15px;
+  }
+  
+  .testimonios p {
+    font-style: italic;
+  }
