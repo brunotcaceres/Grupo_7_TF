@@ -1,25 +1,40 @@
 .barra-navegacion {
-  background-color: #004d40; /* Fondo verde oscuro */
+  background-color: #004d40; /* Fondo verde oscuro al inicio */
+  color: white; /* Color blanco para el texto */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px; /* Reducir padding horizontal */
-  height: 60px; /* Altura compacta */
-  color: white;
-  position:initial; /* Fijar la barra en la parte superior */
+  height: 60px;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.barra-navegacion.scroll {
+  background-color: #fff; /* Fondo blanco al hacer scroll */
+  color: black; /* Color negro para el texto */
+}
+
+
+
+.menu li a, .logo {
+  color: inherit; /* Asegura que los colores de los enlaces sean heredados */
 }
 
 .logo {
   font-family: 'Arial', sans-serif;
   font-size: 1.2rem; /* Tamaño del texto del logo */
   font-weight: bold;
-  color: white;
+  color: inherit;
   margin: 0; /* Eliminar margen */
-  line-height: 100px; /* Centrar verticalmente el texto en la barra */
+  line-height: 60px; /* Centrar verticalmente el texto en la barra */
+  height: 100%;
 }
 
 .menu {
@@ -28,6 +43,7 @@
   gap: 20px; /* Separación entre los elementos del menú */
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 
 .menu li {
@@ -36,9 +52,29 @@
 
 .menu li a {
   text-decoration: none;
-  color: white;
+  display: flex;
+  align-items: center;
+  color: inherit; /* Se asegura que el color se herede del estado de la barra */
   font-size: 1rem;
-  line-height: 60px; /* Centrar verticalmente el texto del menú */
+  transition: color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.menu li:hover a {
+  color: #6f4f1f; /* Color cuando el ratón está sobre el ítem del menú */
+}
+
+.menu :hover {
+  color: #6f4f1f; /* Color cuando el ratón está sobre el ítem del menú */
+}
+
+.flecha {
+  margin-left: 8px; /* Espacio entre el texto y la flecha */
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover .flecha {
+  transform: rotate(180deg); /* Apunta la flecha hacia abajo al hacer hover */
+  color:#6f4f1f;
 }
 
 .iconos {
@@ -47,37 +83,93 @@
   align-items: center;
 }
 
-.iconos i {
-  font-size: 1.2rem; /* Ajustar tamaño de los íconos */
-  cursor: pointer;
+.iconos :hover {
+  color: #6f4f1f;
 }
 
-/* Corrección de los íconos que no se ven */
-.iconos i::before {
-  margin: 0; /* Asegurarse de que no haya margen adicional en los íconos */
+.iconos i {
+  font-size: 1.5rem; /* Ajustar tamaño de los íconos */
+  cursor: pointer;
+  color: #fff;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block; /* Hacer el item contenedor para el submenú */
 }
 
 .submenu {
-  position: absolute;
-  top: 50px; /* Ajustar posición del submenú debajo de la barra */
+  position: fixed; /* Cambiar a absolute */
+  top: 60px; /* Posiciona el submenú justo debajo del ítem del menú */
   left: 0;
-  background-color: #f8f8f8;
-  padding: 10px;
+  background-color: #fff; /* Fondo blanco */
+  padding: 20px;
   display: flex;
-  gap: 20px;
+  gap: 30px; /* Separación más amplia entre las columnas */
   color: #333;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 300px;
+  width: 100%; /* Ancho ajustado al contenido */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.menu-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .submenu-column {
-  width: 150px;
+  width: 25%; /* Ajustar para que cada columna ocupe el 25% del espacio */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.submenu-column img {
+  width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
+  height: auto;
+  margin-bottom: 10px; /* Espacio debajo de la imagen */
+  border-radius: 8px; /* Bordes suaves para las imágenes */
 }
 
 .submenu h4 {
+  font-size: 1.1rem; /* Aumentar tamaño del título */
   margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: black;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.submenu-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.submenu-column ul li {
+  font-size: 0.85rem;
+  padding: 5px 0;
+  position: relative;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+.submenu-column ul li {
+  padding-bottom: 10px;
+}
+
+.carrito-container {
+  position: relative;
 }
 
 .carrito-popup {
@@ -90,12 +182,13 @@
   min-width: 200px;
   text-align: center;
   color: black;
+  visibility: hidden; /* Iniciar con el pop-up oculto */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s;
 }
 
-.menu li:hover .submenu {
-  display: flex;
-}
-
-.submenu {
-  display: none;
+.carrito-container:hover .carrito-popup {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s ease 0s;
 }
