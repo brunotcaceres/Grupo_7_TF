@@ -7,6 +7,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
   }
   
   .mi-cuenta-form {
@@ -31,6 +32,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    color: black;
   }
   
   .btn-acceso {
@@ -50,6 +52,7 @@
   .register-link, .login-link {
     text-align: center;
     margin-top: 10px;
+    color: black;
   }
   
   .dashboard-links {
@@ -78,11 +81,13 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
   }
   
   .forgot-password-container h2 {
     text-align: center;
     margin-bottom: 10px;
+    color: black;
   }
   
   .forgot-password-container p {
