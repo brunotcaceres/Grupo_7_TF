@@ -1,86 +1,153 @@
 .accessories-section {
-    text-align: center;
-    padding: 20px;
-  }
+
+  align-content: center;
+  background-color: white;
+  color: black;
+}
+
+.accessories-section h2 {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.accessories-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Espacio entre botones */
+  padding: 0 0;
+  /* Espacio vertical para la barra de menú */
+  background-color: #ffffff;
+  /* Fondo blanco para la barra de menú */
+  border: 1px solid #ccc;
+  /* Borde alrededor de la barra de menú */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra opcional para la barra de menú */
+  height: 50px;
+
+}
+
+.accessories-menu button {
+  height: 50px;
+
+  border-radius: 0;
+  background-color: #ffffff;
+  /* Fondo blanco para los botones */
+  border: 0;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  /* Eliminar el subrayado */
+  font-size: 1rem;
+  /* Tamaño de la fuente */
+
+}
+
+.accessories-menu button.active {
+  border-bottom: 1px solid black;
+}
+
+.carousel {
+  position: relative;
+  justify-content: center;
   
-  .accessories-menu {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+  max-width: 100%;
+  display: flex;
   
-  .accessories-menu button {
-    padding: 10px 15px;
-    background-color: white;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
+  align-items: center;
+  place-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  overflow: visible;
+  box-sizing: border-box; 
   
-  .accessories-menu button.active {
-    background-color: #004d40;
-    color: white;
-  }
   
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-  }
   
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
   
-  .product-card {
-    flex: 0 0 25%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+
+}
+
+.product-card {
   
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-  }
+  flex: 0 0 25%; /* Ajuste esto según el número de tarjetas que desee mostrar a la vez */
+  max-width: 25%;
+  /* Máximo ancho por elemento para evitar superposición */
   
-  .carousel-prev,
-  .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+  flex-direction: column;
+  /* Organiza el contenido verticalmente */
+
+
+
+  margin-top: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Incluye padding y border en el ancho total */
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+  text-align: left;
   
-  .carousel-prev {
-    left: 10px;
-  }
-  
-  .carousel-next {
-    right: 10px;
-  }
-  
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .carousel-dots button {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border: none;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .carousel-dots button.active {
-    background-color: #004d40;
-  }
-  
+  margin-top: 10px;
+  /* Ajusta según necesidad para reducir el espacio si es necesario */
+  margin-bottom: 0;
+  /* Reduce o elimina el margen inferior */
+}
+
+.product-card p {
+  font-size: 1.4rem;
+  text-align: left;
+  /* Asegura que el precio también esté centrado */
+  margin-top: 5px;
+  /* Reduce el margen superior para acercarlo al nombre del producto */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background-color: #004d40;
+}

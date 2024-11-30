@@ -7,17 +7,18 @@ const Accesorios = () => {
 
   const productos = {
     relicarios: [
-      { id: 1, name: 'Relicario De Plata | Corazón Tallado', price: 'S/150', image: 'img/relicario1.jpg' },
-      { id: 2, name: 'Relicario De Plata | Oval', price: 'S/140', image: 'img/relicario2.jpg' },
-      { id: 3, name: 'Relicario De Plata | Génesis', price: 'S/160', image: 'img/relicario3.jpg' },
-      { id: 4, name: 'Relicario De Plata Con Baño De Oro 18K | Corazón', price: 'S/230', image: 'img/relicario4.jpg' },
-      { id: 5, name: 'Relicario De Plata Con Baño De Oro 19K | Corazón', price: 'S/230', image: 'img/relicario5.jpg' },
+      { id: 1, name: 'Relicario De Plata | Corazón Tallado', price: 'S/150', image: '/img/accesorios/relicario-fotoretrato-plata-corazontallado-plata-lima-platinoperu-600x600.jpg' },
+      { id: 2, name: 'Relicario De Plata | Oval', price: 'S/140', image: '/img/accesorios/relicario-fotoretrato-plata-oval-plata-lima-platinoperu-600x600.jpg' },
+      { id: 3, name: 'Relicario De Plata | Génesis', price: 'S/160', image: '/img/accesorios/relicario-fotoretrato-plata-genesis-plata-lima-platinoperu.jpg' },
+      { id: 4, name: 'Relicario De Plata Con Baño De Oro 18K | Corazón', price: 'S/230', image: '/img/accesorios/relicario-plata-rectangular-PRAGA-lima-miraflores-platinoperu2-600x600.jpg' },
+      { id: 5, name: 'Relicario De Plata Con Baño De Oro 19K | Corazón', price: 'S/230', image: '/img/accesorios/relicario-fotoretrato-plata-amaral-pajaros-plata-lima-platinoperu.jpg' },
     ],
     aretes: [
       { id: 1, name: 'Aretes De Plata | Lavanda Maxi', price: 'S/70', image: 'img/aretes1.jpg' },
       { id: 2, name: 'Aretes De Plata | Peridot London', price: 'S/80', image: 'img/aretes2.jpg' },
       { id: 3, name: 'Aretes De Plata | Rosé Mini', price: 'S/50', image: 'img/aretes3.jpg' },
       { id: 4, name: 'Aretes De Plata | Dunia Maxi', price: 'S/65', image: 'img/aretes4.jpg' },
+      
     ],
     collares: [
       { id: 1, name: 'Collar De Plata | Delicado', price: 'S/120', image: 'img/collar1.jpg' },
@@ -48,14 +49,24 @@ const Accesorios = () => {
   const productosAMostrar = productos[currentCategory];
   const productosPorVista = 4;
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  };
-
   const handleNext = () => {
     const maxIndex = Math.ceil(productosAMostrar.length / productosPorVista) - 1;
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-  };
+    setCurrentIndex(prev => {
+        const nextIndex = Math.min(prev + 1, maxIndex);
+        console.log("Moving to index:", nextIndex);
+        return nextIndex;
+    });
+};
+
+const handlePrev = () => {
+    setCurrentIndex(prev => {
+        const prevIndex = Math.max(prev - 1, 0);
+        console.log("Moving to index:", prevIndex);
+        return prevIndex;
+    });
+};
+
+  
 
   return (
     <section className="accessories-section">
@@ -76,7 +87,8 @@ const Accesorios = () => {
       </div>
 
       <div className="carousel">
-        <div className="carousel-inner" style={{ transform: `translateX(-${(currentIndex * 100) / productosPorVista}%)` }}>
+      <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * (100 / productosPorVista)}%)`}}>
+
           {productosAMostrar.map((producto) => (
             <div className="product-card" key={producto.id}>
               <img src={producto.image} alt={producto.name} />

@@ -1,5 +1,5 @@
 .nuestro-proceso {
-    text-align: center;
+    
     padding: 50px 20px;
     background-color: #fff;
   }
@@ -13,34 +13,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
+    border: 1px black;
   }
   
   .proceso-item {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;  /* Organiza los hijos (icono y texto) en una columna */
+    align-items: left;  /* Centra los hijos horizontalmente */
+    text-align: center;  /* Asegura que el texto esté centrado */
+    padding: 10px;
+    
+    
+    
   }
   
   .proceso-icono {
-    width: 50px;
+    width: 15%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    
+    margin-left: 0; /* Alinea completamente a la izquierda */
+    
   }
   
   .proceso-item h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
-    color: #004d40;
+    color: black;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+
   }
   
   .proceso-item p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
+    text-align: justify;
+    line-height: 35px;
   }
   
   @media (max-width: 768px) {

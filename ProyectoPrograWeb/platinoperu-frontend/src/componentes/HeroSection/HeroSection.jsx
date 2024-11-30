@@ -1,19 +1,44 @@
-import React from 'react';
-import './HeroSection.css';
+import React from "react";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="logo-container">
-        <div className="rotating-text">
-          <span>PLATINO PERÚ - DESDE 1985 - JOYERÍA FINA - </span>
-        </div>
-        <img src="ruta_del_logo.svg" alt="Logo Platino Perú" className="main-logo" />
+        {/* SVG con el texto circular */}
+        <svg
+          viewBox="0 0 400 400"
+          xmlns="http://www.w3.org/2000/svg"
+          className="rotating-text"
+        >
+          <defs>
+            {/* Definimos el camino circular */}
+            <path
+              id="circlePath"
+              d="M 200, 200 m -140, 0 a 140,140 0 1,1 280,0 a 140,140 0 1,1 -280,0"
+            />
+          </defs>
+          <text
+            fontSize="20"
+            fontFamily="Arial, sans-serif"
+            fill="#ffffff"
+            letterSpacing="10"
+          >
+            <textPath href="#circlePath" startOffset="0%">
+              JOYERÍA FINA - PLATINO PERÚ - DESDE 1985 -
+            </textPath>
+          </text>
+        </svg>
+
+        {/* Imagen del logo */}
+        <img src="/img/Logo/lofo.png" alt="Logo Platino Perú" className="main-logo" />
       </div>
-      <h1>
-        Nuestras joyas son un símbolo perdurable de tus sentimientos{' '}
+
+      <h1 className="hero-title">
+        Nuestras joyas son un símbolo perdurable de tus sentimientos{" "}
         <span className="heart-icon">❤️</span>
       </h1>
+
       <a href="/asesoria" className="hero-button">ASESORÍA EXCLUSIVA</a>
     </section>
   );
