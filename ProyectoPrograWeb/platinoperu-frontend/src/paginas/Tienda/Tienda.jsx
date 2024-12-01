@@ -5,6 +5,7 @@ import Filtro from '../../componentes/Filtro/Filtro';
 import Ordenamiento from '../../componentes/Ordenamiento/Ordenamiento';
 import BarraNavegacion from '../../componentes/BarraNavegacion/BarraNavegacion';
 import PiePagina from '../../componentes/PiePagina/PiePagina';
+import Breadcrumb from '../../componentes/Breadcrumb/Breadcrumb';
 import './Tienda.css';
 
 const Tienda = () => {
@@ -26,9 +27,12 @@ const Tienda = () => {
     ];
   
     return (
-      <div className="tienda">
+      <div>
         <BarraNavegacion />
-        <div className="breadcrumb">Home {'>'} Shop</div>
+        <Breadcrumb path="Tienda" />
+      <div className="tienda">
+        
+        
         <h1 className="titulo">Shop</h1>
   
         <div className="categorias">
@@ -62,6 +66,7 @@ const Tienda = () => {
           <span>&gt;</span>
         </div>
         <PiePagina />
+      </div>
       </div>
     );
   };

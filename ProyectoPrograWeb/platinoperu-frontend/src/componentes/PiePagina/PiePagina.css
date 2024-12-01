@@ -3,11 +3,11 @@
   padding: 50px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  
   color: #333;
   font-family: Arial, sans-serif;
   gap: 150px;
-  position: absolute;
+  height: auto;
   width: 100%;
 
 }

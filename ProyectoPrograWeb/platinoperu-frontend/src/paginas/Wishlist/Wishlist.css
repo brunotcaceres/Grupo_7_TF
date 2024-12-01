@@ -1,6 +1,11 @@
 .wishlist-container {
     text-align: center;
     margin: 0 auto;
+    color: black;
+    width: 100%;
+    position: relative;
+    height: auto;
+    min-height: 500px;
 }
 
 eliminado {
@@ -17,7 +22,10 @@ eliminado {
 .wishlist-content {
     margin: 50px auto;
 }
-
+.wishlist-icon img {
+    width: 10%;
+    height: auto;
+}
 .heart-icon {
     font-size: 1em;
     color: #ddd;

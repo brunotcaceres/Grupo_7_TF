@@ -2,18 +2,29 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    margin-bottom: 40px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
     color: black;
+    min-height: 100%;
     position: relative;
+    padding-bottom: 50px;
+    
   }
-  
+  h2 {
+    color: black;
+    margin: 20px;
+    font-size: 3rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+  }
+
   .mi-cuenta-form {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
   
   .mi-cuenta-form label {
@@ -77,12 +88,13 @@
   
   .forgot-password-container {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: black;
+
   }
   
   .forgot-password-container h2 {

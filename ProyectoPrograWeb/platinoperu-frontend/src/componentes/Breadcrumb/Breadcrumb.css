@@ -8,6 +8,7 @@
     position: relative;
     margin-top: 60px;
     text-align: left;
+    padding-left: 20px;
   }
   .breadcrumb span {
     font-size: 16px;
@@ -22,5 +23,5 @@
 
 .breadcrumb a:hover {
     text-decoration: underline;
-    color: #0275d8;
+    
 }

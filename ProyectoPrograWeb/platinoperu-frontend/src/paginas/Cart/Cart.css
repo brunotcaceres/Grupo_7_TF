@@ -1,25 +1,25 @@
 .cart-container {
-  margin-top: 0;  
+   
   text-align: center;
-  margin: 0 ;
+  
   font-family: 'Arial', sans-serif;
   background-color: white;
   color: black;
   position: relative;
-  min-height: 100vh;
+  height: auto;
+  
   }
-  .cart-header, .cart-content {
-    flex: 1;  
-    overflow: auto;
-  }
+  
   .cart-header h2 {
-    margin-top: 100px;
+    
     font-size: 3rem;
+    position: relative;
   }
   
   .cart-content {
-    margin: 40px auto;
-    flex: 1;
+    margin: 40px;
+    
+    margin-top: 80px;
   }
   
   .cart-empty {

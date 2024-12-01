@@ -13,6 +13,7 @@ const MiCuenta = () => {
     <>
       <BarraNavegacion />
       <Breadcrumb path="Mi Cuenta" />
+      <h2>Mi Cuenta</h2>
       <Routes>
       <Route path="/" element={<LoginForm />} />
       <Route path="/register" element={<RegisterForm />} />

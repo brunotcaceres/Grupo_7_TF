@@ -1,9 +1,12 @@
 #root {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
-  flex-grow: 1;
+  min-height: 10;
+  
+  position: relative;
+
 }
 
 
