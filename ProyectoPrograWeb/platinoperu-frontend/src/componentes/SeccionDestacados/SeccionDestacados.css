@@ -1,17 +1,17 @@
 .seccion-destacados {
   display: flex;
   flex-direction: column;
-  gap: 0; /* Espacio entre cada producto */
+  gap: 0; 
   margin: 0;
-  background-color: inherit; /* Fondo blanco */
+  background-color: inherit; 
   color: black;
 }
 
 .destacado {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra verticalmente */
-  gap: 100px; /* Espacio entre imágenes y texto */
+  justify-content: center;
+  gap: 100px; 
   margin: 0;
   border-radius: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,18 +21,18 @@
 }
 
 .destacado.reversa {
-  flex-direction: row-reverse; /* Invierte el orden de los elementos */
+  flex-direction: row-reverse; 
 }
 
 .imagenes {
   display: flex;
-  flex-direction: column; /* Asegura que las imágenes estén una debajo de otra */
-  gap: 15px; /* Espacio entre las imágenes */
+  flex-direction: column; 
+  gap: 15px; 
   
 }
 
 .imagenes img {
-  width: 450px; /* Tamaño fijo para las imágenes */
+  width: 450px; 
   height: auto;
   
   
@@ -44,12 +44,12 @@
   justify-content: center;
   text-align: left;
   width: 400px;
-  max-width: 400px; /* Ajusta el ancho del texto */
+  max-width: 400px; 
   
 }
 
 .informacion h2 {
-  font-size: 4rem; /* Título más grande */
+  font-size: 4rem; 
   margin-bottom: 50px;
   font-family: 'Playfair Display', serif;
 }

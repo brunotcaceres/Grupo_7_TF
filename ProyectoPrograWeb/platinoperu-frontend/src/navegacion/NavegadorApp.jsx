@@ -49,7 +49,7 @@ import AnilloCompromisoDiamanteMoissanita from '../paginas/AnilloCompromisoDiama
 import AMPlataLey950 from '../paginas/AMPlataLey950/AMPlataLey950';
 import AMPlataConOro18k from '../paginas/AMPlataConOro18k/AMPlataConOro18k';
 import AMOro18k from '../paginas/AMOro18k/AMOro18k.JSX';
-// Importa otras páginas si es necesario
+// Importen otras páginas si es necesario
 
 function NavegadorApp() {
   return (
@@ -108,7 +108,7 @@ function NavegadorApp() {
         
 
 
-        {/* Agrega otras rutas si es necesario */}
+        {/* Agreguen otras rutas si es necesario */}
       </Routes>
     </Router>
   );

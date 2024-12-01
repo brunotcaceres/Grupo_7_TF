@@ -29,7 +29,7 @@ const BarraNavegacion = () => {
   const toggleSubmenu = (submenu) => {
     setSubmenuVisible({
       ...submenuVisible,
-      [submenu]: !submenuVisible[submenu], // Cambiar el estado de visibilidad del submenú
+      [submenu]: !submenuVisible[submenu], 
     });
   };
 
@@ -39,7 +39,7 @@ const BarraNavegacion = () => {
       <ul className="menu">
         <li><a href="/">Inicio</a></li>
 
-        {/* Menú Novios */}
+        
         <li
           className="menu-item"
           onMouseEnter={() => manejarMenu('novios')}
@@ -142,7 +142,7 @@ const BarraNavegacion = () => {
           </div>
         </li>
 
-        {/* Menú Matrimonio */}
+        
         <li
           className="menu-item"
           onMouseEnter={() => manejarMenu('matrimonio')}
@@ -208,7 +208,7 @@ const BarraNavegacion = () => {
           </div>
         </li>
 
-        {/* Menú Accesorios */}
+        
         <li
           className="menu-item"
           onMouseEnter={() => manejarMenu('accesorios')}

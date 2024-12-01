@@ -10,8 +10,8 @@
 }
 eliminado {
   padding: 10px 0;
-  background-color: #f4f4f4; /* Color de fondo */
-  margin-bottom: 20px; /* Espacio debajo del breadcrumb */
+  background-color: #f4f4f4; 
+  margin-bottom: 20px; 
   text-align: left;
   color: black;
   position: relative;
@@ -29,7 +29,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  max-width: 800px; 
   text-align: left;
 }
 
@@ -48,15 +48,15 @@ h1 {
   justify-content: center;
   padding: 20px ;
   gap: 50px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra alrededor del contenedor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
 .mapa {
-  width: 45%; /* Ajusta el ancho de cada mapa para que no ocupen todo el ancho */
-  margin: 0 10px; /* Espacio entre los mapas */
+  width: 45%;  
+  margin: 0 10px; 
 }
 
 iframe {
   width: 100%;
-  height: 500px; /* Ajusta la altura según necesites */
+  height: 500px; 
 }

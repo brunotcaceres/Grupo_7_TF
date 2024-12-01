@@ -43,19 +43,19 @@
 
 .contacto i {
   margin-right: 10px;
-  color: black; /* Ajusta el color según tu diseño */
+  color: black; 
 }
 
 
 .certificaciones-y-redes {
   
   align-items: center;
-  gap: 20px; /* Ajusta según tus necesidades */
+  gap: 20px; 
 }
 .certificaciones-y-redes p {
   text-align: center;
   width: 100%;
-  margin-top: 20px; /* Añade espacio encima del texto de derechos */
+  margin-top: 20px; 
   font-size: 0.7rem;
 }
 .certificaciones-y-redes img {
@@ -65,7 +65,7 @@
 }
 .fa-brands {
   font-size: 24px;
-  color: #333; /* Ajusta el color según tu diseño */
+  color: #333; 
 }
 
 .certificaciones-y-redes a {

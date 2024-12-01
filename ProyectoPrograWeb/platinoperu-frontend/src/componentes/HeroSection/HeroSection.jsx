@@ -5,14 +5,14 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="logo-container">
-        {/* SVG con el texto circular */}
+        
         <svg
           viewBox="0 0 400 400"
           xmlns="http://www.w3.org/2000/svg"
           className="rotating-text"
         >
           <defs>
-            {/* Definimos el camino circular */}
+            
             <path
               id="circlePath"
               d="M 200, 200 m -140, 0 a 140,140 0 1,1 280,0 a 140,140 0 1,1 -280,0"
@@ -30,7 +30,7 @@ const HeroSection = () => {
           </text>
         </svg>
 
-        {/* Imagen del logo */}
+        
         <img src="/img/Logo/lofo.png" alt="Logo Platino Perú" className="main-logo" />
       </div>
 
