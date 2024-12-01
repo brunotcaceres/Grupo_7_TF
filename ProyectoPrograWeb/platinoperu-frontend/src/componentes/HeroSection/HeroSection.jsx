@@ -39,7 +39,7 @@ const HeroSection = () => {
         <span className="heart-icon">❤️</span>
       </h1>
 
-      <a href="/asesoria" className="hero-button">ASESORÍA EXCLUSIVA</a>
+      <a href="https://beacons.ai/platinoperu" target="_blank" rel="noopener noreferrer" className="hero-button">ASESORÍA EXCLUSIVA</a>
     </section>
   );
 };

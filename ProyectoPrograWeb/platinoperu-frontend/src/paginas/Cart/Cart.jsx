@@ -19,6 +19,7 @@ const Cart = () => {
       </div>
       <PiePagina />
     </div>
+    
   );
 };
 

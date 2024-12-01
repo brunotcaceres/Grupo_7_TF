@@ -9,13 +9,14 @@ import NuestroProceso from '../../componentes/NuestroProceso/NuestroProceso';
 const Inicio = () => {
   return (
     <div>
-      <BarraNavegacion />
+      <header><BarraNavegacion /></header>
       <HeroSection />
       <SeccionDestacados />
       <Accesorios />
       <NuestroProceso />
-      <PiePagina />
+      <footer><PiePagina /></footer>
     </div>
+    
   );
 };
 
