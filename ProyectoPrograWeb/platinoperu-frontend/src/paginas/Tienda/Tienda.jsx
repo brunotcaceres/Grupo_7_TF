@@ -30,10 +30,11 @@ const Tienda = () => {
       <div>
         <BarraNavegacion />
         <Breadcrumb path="Tienda" />
+        <h1 className="titulo">Shop</h1>
       <div className="tienda">
         
         
-        <h1 className="titulo">Shop</h1>
+        
   
         <div className="categorias">
           {categorias.map((categoria, index) => (
@@ -65,8 +66,9 @@ const Tienda = () => {
           <span>49</span>
           <span>&gt;</span>
         </div>
-        <PiePagina />
+        
       </div>
+      <PiePagina />
       </div>
     );
   };

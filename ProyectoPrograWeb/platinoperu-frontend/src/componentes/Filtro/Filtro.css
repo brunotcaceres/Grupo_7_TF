@@ -1,5 +1,14 @@
 .filtro {
     position: relative;
+    
+  }
+  .filtro-orden {
+    position: relative;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 20px;
   }
   
   .filtro button {
