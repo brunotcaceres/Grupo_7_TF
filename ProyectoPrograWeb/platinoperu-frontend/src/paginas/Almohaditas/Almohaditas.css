@@ -41,11 +41,7 @@
     border-radius: 5px;
 }
 
-.breadcrumb {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #777;
-}
+
 
 .paginacion {
     display: flex;
