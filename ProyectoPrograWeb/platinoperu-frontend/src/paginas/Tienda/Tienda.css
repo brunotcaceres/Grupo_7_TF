@@ -80,16 +80,41 @@
     gap: 20px;
   }
   
-  .productos .producto-card {
+  .producto-card {
     border: 1px solid #ddd;
-    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
     text-align: center;
-    transition: box-shadow 0.3s ease;
+    padding: 10px;
   }
   
-  .productos .producto-card img {
-    max-width: 100%;
-    margin-bottom: 10px;
+  .producto-imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .wishlist-btn {
+    display: block; /* El botón ocupa una línea propia */
+    margin: 10px auto; /* Centrarlo horizontalmente debajo de la imagen */
+    background-color: inherit;
+    border: none; /* Sin borde */
+    font-size: 20px; /* Tamaño del ícono */
+    cursor: pointer; /* Manito al hacer hover */
+    color: red; /* Color del corazón */
+    padding: 0; /* Sin padding */
+    transition: transform 0.2s ease; /* Efecto sutil al hacer hover */
+  }
+  
+  .wishlist-btn:hover {
+    transform: scale(1.2); /* Agrandar el ícono al hacer hover */
+    background-color: white;
+  }
+  
+  .producto-detalles {
+    padding: 10px;
   }
   
   .productos .producto-card h3 {
