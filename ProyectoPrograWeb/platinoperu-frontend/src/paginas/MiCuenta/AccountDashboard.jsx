@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AccountDashboard = () => {
   const [userData, setUserData] = useState({
@@ -8,6 +9,7 @@ const AccountDashboard = () => {
     password: '',
   });
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Recuperar los datos del usuario desde localStorage
@@ -48,6 +50,14 @@ const AccountDashboard = () => {
       console.error('Error al actualizar el perfil:', error);
       setMessage('Error al conectar con el servidor');
     }
+  };
+
+  const handleLogout = () => {
+    // Eliminar los datos del usuario del localStorage
+    localStorage.removeItem('user');
+    localStorage.removeItem('authToken');
+    // Redirigir a la página "/mi-cuenta"
+    navigate('/mi-cuenta');
   };
 
   return (
@@ -94,6 +104,10 @@ const AccountDashboard = () => {
 
         <button type="submit">Guardar Cambios</button>
       </form>
+      {/* Botón de Logout */}
+      <button onClick={handleLogout} className="logout-button">
+        Cerrar Sesión
+      </button>
     </div>
   );
 };

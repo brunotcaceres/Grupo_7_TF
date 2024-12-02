@@ -36,8 +36,13 @@ const LoginForm = () => {
           // Almacenar información del usuario si es necesario
           localStorage.setItem('user', JSON.stringify(data.user));
   
-          // Redirigir al usuario a la ruta "/inicio"
-          navigate('/');
+          // Verificar si el usuario es "admin" para redirigir a /admin
+          if (data.user.nombreUsuario === 'Admin' || data.user.email === 'Admin@Admin.Admin') {
+            navigate('/admin');
+          } else {
+            // Redirigir al usuario a la ruta "/inicio"
+            navigate('/');
+          }
         } else {
           setError(data.error || 'Error al iniciar sesión.');
         }
@@ -50,11 +55,6 @@ const LoginForm = () => {
       setError('No se pudo conectar con el servidor. Inténtalo más tarde.');
     }
   };
-  
-  
-  
-  
-  
 
   return (
     <div className="mi-cuenta-container">
