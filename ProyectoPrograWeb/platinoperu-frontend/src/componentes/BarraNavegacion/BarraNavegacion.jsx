@@ -57,7 +57,7 @@ const BarraNavegacion = () => {
           <i className={`fa fa-chevron-down flecha ${menuActivo === 'novios' ? 'activo' : ''}`}></i>
           <div className={`submenu ${menuActivo === 'novios' ? 'visible' : ''}`}>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/novioscompromiso.png" alt="Anillo de Compromiso" />
+              <img src="/img/Barra/novioscompromiso.png" alt="Anillo de Compromiso" />
               <h4 onClick={() => toggleSubmenu('noviosCompromiso')}>
                 <i className={`fa ${submenuVisible.noviosCompromiso ? 'fa-minus' : 'fa-plus'}`} />
                 Anillo de Compromiso
@@ -80,7 +80,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/noviosAlianza.png" />
+              <img src="/img/Barra/noviosAlianza.png" />
               <h4 onClick={() => toggleSubmenu('alianzasDeAmor')}>
                 <i className={`fa ${submenuVisible.alianzasDeAmor ? 'fa-minus' : 'fa-plus'}`} />
                 Alianzas de Amor
@@ -97,7 +97,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/noviospromesa.png" />
+              <img src="/img/Barra/noviospromesa.png" />
               <h4 onClick={() => toggleSubmenu('anilloDePromesa')}>
                 <i className={`fa ${submenuVisible.anilloDePromesa ? 'fa-minus' : 'fa-plus'}`} />
                 Anillo de Promesa
@@ -128,7 +128,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/novioscaballero.png" />
+              <img src="/img/Barra/novioscaballero.png" />
               <h4 onClick={() => toggleSubmenu('caballero')}>
                 <i className={`fa ${submenuVisible.caballero ? 'fa-minus' : 'fa-plus'}`} />
                 Caballero
@@ -160,7 +160,7 @@ const BarraNavegacion = () => {
           <i className={`fa fa-chevron-down flecha ${menuActivo === 'matrimonio' ? 'activo' : ''}`}></i>
           <div className={`submenu ${menuActivo === 'matrimonio' ? 'visible' : ''}`}>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/matrimonio1.png" />
+              <img src="/img/Barra/matrimonio1.png" />
               <h4 onClick={() => toggleSubmenu('matrimonioMaterial')}>
                 <i className={`fa ${submenuVisible.matrimonioMaterial ? 'fa-minus' : 'fa-plus'}`} />
                 Aros Matrimonio por Material
@@ -177,7 +177,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/matrimonio2.png" />
+              <img src="/img/Barra/matrimonio2.png" />
               <h4 onClick={() => toggleSubmenu('matrimonioDiseno')}>
                 <i className={`fa ${submenuVisible.matrimonioDiseno ? 'fa-minus' : 'fa-plus'}`} />
                 Aros Matrimonio por Diseño
@@ -194,7 +194,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/matrimonio3.png" />
+              <img src="/img/Barra/matrimonio3.png" />
               <h4 onClick={() => toggleSubmenu('matrimonioDecorativo')}>
                 <i className={`fa ${submenuVisible.matrimonioDecorativo ? 'fa-minus' : 'fa-plus'}`} />
                 Decorativos
@@ -211,7 +211,7 @@ const BarraNavegacion = () => {
               )}
             </div>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/matrimonio4.png" />
+              <img src="/img/Barra/matrimonio4.png" />
             </div>
           </div>
         </li>
@@ -226,7 +226,7 @@ const BarraNavegacion = () => {
           <i className={`fa fa-chevron-down flecha ${menuActivo === 'accesorios' ? 'activo' : ''}`}></i>
           <div className={`submenu ${menuActivo === 'accesorios' ? 'visible' : ''}`}>
             <div className="submenu-column">
-              <img src="/img/Barranavegacion/accesorio.png" />
+              <img src="/img/Barra/accesorio.png" />
             </div>
             <div className="submenu-column">
               <h4 onClick={() => toggleSubmenu('accesoriosDama')}>
