@@ -10,20 +10,20 @@ import './Tienda.css';
 
 const Tienda = () => {
     const categorias = [
-      { nombre: 'Matrimonio', icono: '/icons/matrimonio.png', link: '/matrimonio' },
-      { nombre: 'Novios', icono: '/icons/novios.png', link: '/novios' },
-      { nombre: 'Para Él', icono: '/icons/para-el.png', link: '/para-el' },
-      { nombre: 'Para Ella', icono: '/icons/para-ella.png', link: '/para-ella' },
-      { nombre: 'Piedras Preciosas', icono: '/icons/piedras.png', link: '/piedras-preciosas' },
-      { nombre: 'Regalos', icono: '/icons/regalos.png', link: '/regalos' },
+      { nombre: 'Matrimonio', icono: '/img/shop/A1-100x100.png', link: '/matrimonio' },
+      { nombre: 'Novios', icono: '/img/shop/a14-100x100.png', link: '/novios' },
+      { nombre: 'Para Él', icono: '/img/shop/a5-100x100.png', link: '/para-el' },
+      { nombre: 'Para Ella', icono: '/img/shop/a6-100x100.png', link: '/para-ella' },
+      { nombre: 'Piedras Preciosas', icono: '/img/shop/a13-100x100.png', link: '/piedras-preciosas' },
+      { nombre: 'Regalos', icono: '/img/shop/a11-100x100.png', link: '/regalos' },
     ];
   
     const productos = [
-      { id: 1, nombre: 'Alianzas De Plata | Ariz', precio: 300, imagen: '/product1.jpg' },
-      { id: 2, nombre: 'Alianzas De Plata | Aster', precio: 300, imagen: '/product2.jpg' },
-      { id: 3, nombre: 'Alianzas De Plata | Ayra', precio: 290, imagen: '/product3.jpg' },
-      { id: 4, nombre: 'Alianzas De Plata | Brisa', precio: 290, imagen: '/product4.jpg', descuento: '17%' },
-      { id: 5, nombre: 'Alianzas De Plata | Barroco', precio: 650, imagen: '/product5.jpg' },
+      { id: 1, nombre: 'Alianzas De Plata | Ariz', precio: 300, imagen: '/img/shop/alianzas-parejas-plata-amor-infinito-lima-miraflores-platinoperu-600x600.jpg' },
+      { id: 2, nombre: 'Alianzas De Plata | Aster', precio: 300, imagen: '/img/shop/alianzas-parejas-plata-aster-lima-miraflores-platinoperu-600x600.jpg' },
+      { id: 3, nombre: 'Alianzas De Plata | Ayra', precio: 290, imagen: '/img/shop/alianzas-plata-parejas-ALEPH-lima-miraflores-platinoperu.jpg' },
+      { id: 4, nombre: 'Alianzas De Plata | Brisa', precio: 290, imagen: '/img/shop/presentacion-platino-alianzas-platinoperu-final-600x600.jpg', descuento: '17%' },
+      { id: 5, nombre: 'Alianzas De Plata | Barroco', precio: 650, imagen: '/img/shop/alianzas-plata-novios-amor-BLISS-lima-miraflores-platinoperu2-600x600.jpg' },
     ];
   
     return (
@@ -48,17 +48,30 @@ const Tienda = () => {
         </div>
   
         <div className="productos">
-          {productos.map((producto) => (
-            <ProductoCard 
-              key={producto.id} 
-              nombre={producto.nombre} 
-              precio={producto.precio} 
-              imagen={producto.imagen} 
-              descuento={producto.descuento} 
-            />
-          ))}
-        </div>
-  
+  {productos.map((producto) => (
+    <div key={producto.id} className="producto-card">
+      {/* Imagen del producto */}
+      <div className="producto-imagen">
+        <img src={producto.imagen} alt={producto.nombre} />
+      </div>
+
+      {/* Botón de wishlist debajo de la imagen */}
+      <button
+        className="wishlist-btn"
+        onClick={() => handleWishlistClick(producto)}
+      >
+        ❤️
+      </button>
+
+      {/* Detalles del producto */}
+      <div className="producto-detalles">
+        <h3>{producto.nombre}</h3>
+        <p>Precio: ${producto.precio}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
         <div className="paginacion">
           <span>1</span>
           <span>2</span>
