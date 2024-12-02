@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './MiCuenta.css';
 
 const RegisterForm = () => {
@@ -7,7 +7,7 @@ const RegisterForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const history = useHistory(); 
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ const RegisterForm = () => {
 
       if (response.ok) {
         localStorage.setItem('user', JSON.stringify(data));
-        history.push('/');
+        navigate('/');
       } else {
         setError(data.error || 'Hubo un error al crear la cuenta.');
       }

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from '../paginas/Inicio/Inicio';
-
+import AdminPanel from '../paginas/Admin/admin';
 import MiCuenta from '../paginas/MiCuenta/MiCuenta';
 import Wishlist from '../paginas/Wishlist/Wishlist';
 import Cart from '../paginas/Cart/Cart';
@@ -57,6 +57,7 @@ function NavegadorApp() {
     <Router>
       <Routes>
         <Route path="/" element={<Inicio />} />
+        <Route path="/admin" element={<AdminPanel />} />
         
         <Route path="/mi-cuenta/*" element={<MiCuenta />} />
         <Route path="/wishlist" element={<Wishlist />} />

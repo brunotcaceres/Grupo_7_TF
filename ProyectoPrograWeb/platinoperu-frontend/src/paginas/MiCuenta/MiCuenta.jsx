@@ -15,12 +15,12 @@ const MiCuenta = () => {
       <Breadcrumb path="Mi Cuenta" />
       <h1>Mi Cuenta</h1>
       <Routes>
-      <Route path="/" element={<LoginForm />} />
-      <Route path="/register" element={<RegisterForm />} />
-      <Route path="/dashboard" element={<AccountDashboard />} />
-      <Route path="/forgot-password" element={<ForgotPasswordForm />} />
-    </Routes>
-    <PiePagina />
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/dashboard" element={<AccountDashboard />} />
+        <Route path="/forgot-password" element={<ForgotPasswordForm />} />
+      </Routes>
+      <PiePagina />
     </>
   );
 };
