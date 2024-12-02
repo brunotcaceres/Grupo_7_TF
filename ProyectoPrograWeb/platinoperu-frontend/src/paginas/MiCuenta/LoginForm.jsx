@@ -6,12 +6,12 @@ const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Hook para redireccionar
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Verificar que los campos no estén vacíos
+    
     if (!username || !password) {
       setError('Por favor, completa todos los campos.');
       return;
@@ -26,21 +26,21 @@ const LoginForm = () => {
         body: JSON.stringify({ username, password }),
       });
   
-      // Verificar si el servidor responde con JSON
+      
       const contentType = response.headers.get('Content-Type');
       if (contentType && contentType.includes('application/json')) {
         const data = await response.json();
         if (response.ok) {
           console.log('Inicio de sesión exitoso:', data);
   
-          // Almacenar información del usuario si es necesario
+         
           localStorage.setItem('user', JSON.stringify(data.user));
   
-          // Verificar si el usuario es "admin" para redirigir a /admin
+          
           if (data.user.nombreUsuario === 'Admin' || data.user.email === 'Admin@Admin.Admin') {
             navigate('/admin');
           } else {
-            // Redirigir al usuario a la ruta "/inicio"
+            
             navigate('/');
           }
         } else {

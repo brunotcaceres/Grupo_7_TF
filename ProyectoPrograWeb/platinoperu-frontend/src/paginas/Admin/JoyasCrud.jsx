@@ -4,8 +4,8 @@ import './admin.css';
 const JoyasCrud = () => {
   const [joyas, setJoyas] = useState([]);
   const [formData, setFormData] = useState({});
-  const [editMode, setEditMode] = useState(false); // Controla si estamos editando una joya
-  const [editId, setEditId] = useState(null); // Guarda el ID de la joya que se está editando
+  const [editMode, setEditMode] = useState(false); 
+  const [editId, setEditId] = useState(null); 
 
   useEffect(() => {
     fetchJoyas();
@@ -26,7 +26,7 @@ const JoyasCrud = () => {
 
     try {
       if (editMode) {
-        // Si estamos en modo edición, hacemos un PUT
+        
         await fetch(`http://localhost:4000/admin/productos/${editId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -35,15 +35,15 @@ const JoyasCrud = () => {
         setEditMode(false);
         setEditId(null);
       } else {
-        // Si no estamos editando, hacemos un POST
+        
         await fetch('http://localhost:4000/admin/productos', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         });
       }
-      fetchJoyas(); // Actualizamos la lista
-      setFormData({}); // Reseteamos el formulario
+      fetchJoyas(); 
+      setFormData({}); 
     } catch (error) {
       console.error('Error al guardar la joya:', error);
     }

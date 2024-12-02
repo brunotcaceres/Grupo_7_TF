@@ -7,9 +7,9 @@ const BarraNavegacion = () => {
   const [menuActivo, setMenuActivo] = useState('');
   
   const [submenuVisible, setSubmenuVisible] = useState({
-    novios: true,  // Submenú visible por defecto
-    matrimonio: true,  // Submenú visible por defecto
-    accesorios: true,  // Submenú visible por defecto
+    novios: true,  
+    matrimonio: true,  
+    accesorios: true,  
     noviosCompromiso: true,
     alianzasDeAmor: true,
     anilloDePromesa: true,
@@ -25,7 +25,7 @@ const BarraNavegacion = () => {
   const [usuarioAutenticado, setUsuarioAutenticado] = useState(null);
 
   useEffect(() => {
-    // Check for user authentication state in localStorage
+    
     const user = JSON.parse(localStorage.getItem('user'));
     setUsuarioAutenticado(user);
   }, []);
@@ -310,12 +310,12 @@ const BarraNavegacion = () => {
         <i className="fa fa-search"></i>
         <nav>
           {usuarioAutenticado ? (
-            // Enlace dinámico a Dashboard si el usuario está autenticado
+            
             <Link to="/mi-cuenta/dashboard">
               <i className="fa fa-user"></i>
             </Link>
           ) : (
-            // Enlace a Mi Cuenta si no está autenticado
+            
             <Link to="/mi-cuenta">
               <i className="fa fa-user"></i>
             </Link>

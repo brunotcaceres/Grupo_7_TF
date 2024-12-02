@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [shippingCost, setShippingCost] = useState(12); // Costo predeterminado del envío
+  const [shippingCost, setShippingCost] = useState(12); 
   const navigate = useNavigate();
   const handleCheckout = () => {
-    // Redirige a la página de checkout
+    
     navigate('/checkout');
   };
 

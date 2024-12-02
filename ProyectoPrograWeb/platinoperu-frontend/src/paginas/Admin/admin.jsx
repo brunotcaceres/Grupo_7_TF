@@ -3,7 +3,7 @@ import UsuariosCrud from './UsuariosCrud';
 import JoyasCrud from './JoyasCrud';
 
 const AdminPanel = () => {
-  const [activeSection, setActiveSection] = useState(''); // Controla la sección activa
+  const [activeSection, setActiveSection] = useState(''); 
 
   const renderSection = () => {
     if (activeSection === 'usuarios') {

@@ -32,9 +32,9 @@ const RegisterForm = () => {
         const data = await response.json();
 
         if (response.ok) {
-            // Guardar usuario en localStorage
+            
             localStorage.setItem('user', JSON.stringify(data));
-            setError(''); // Limpiar errores previos si los hay
+            setError(''); 
         } else {
             setError(data.error || 'Hubo un error al iniciar sesión.');
         }

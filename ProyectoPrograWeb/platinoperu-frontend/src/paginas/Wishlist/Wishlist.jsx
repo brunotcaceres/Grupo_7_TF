@@ -9,24 +9,24 @@ const Wishlist = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    // Cargar la wishlist desde localStorage al montar el componente
+ 
     const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     setWishlistItems(storedWishlist);
 
-    // Cargar el carrito desde localStorage
+   
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCartItems(storedCart);
   }, []);
 
   const handleRemoveFromWishlist = (id) => {
-    // Eliminar el producto de la wishlist
+    
     const updatedWishlist = wishlistItems.filter((item) => item.id !== id);
     setWishlistItems(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
   };
 
   const handleAddToCart = (producto) => {
-    // Verificar si el producto ya está en el carrito
+   
     const isInCart = cartItems.some((item) => item.id === producto.id);
 
     if (!isInCart) {
@@ -54,7 +54,7 @@ const Wishlist = () => {
               <h3>{item.nombre}</h3>
               <p>Precio: ${item.precio}</p>
 
-              {/* Botón para eliminar de la wishlist */}
+              
               <button
                 className="remove-btn"
                 onClick={() => handleRemoveFromWishlist(item.id)}
@@ -62,7 +62,7 @@ const Wishlist = () => {
                 Eliminar
               </button>
 
-              {/* Botón para añadir al carrito */}
+              
               <button
                 className="add-to-cart-btn"
                 onClick={() => handleAddToCart(item)}

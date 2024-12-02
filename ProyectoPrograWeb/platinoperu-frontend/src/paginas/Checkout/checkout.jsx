@@ -7,36 +7,36 @@ import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [shippingCost, setShippingCost] = useState(12); // Costo de envío predeterminado
+  const [shippingCost, setShippingCost] = useState(12); 
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Recuperar los elementos del carrito desde localStorage
+    
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCartItems(storedCart);
 
-    // Calcular el subtotal
+    
     const calculatedSubtotal = storedCart.reduce(
       (acc, item) => acc + item.precio * item.quantity,
       0
     );
     setSubtotal(calculatedSubtotal);
 
-    // Calcular el total (subtotal + envío)
+   
     setTotal(calculatedSubtotal + shippingCost);
-  }, [shippingCost]); // Recalcular total si cambia el costo de envío
+  }, [shippingCost]); 
 
   const handleOrderClick = () => {
-    // Validar el formulario antes de continuar
+    
     const form = document.querySelector('.Formulariopago');
     if (form.reportValidity()) {
-      // Limpia el carrito y la wishlist del localStorage
+     
       localStorage.removeItem('cart');
       localStorage.removeItem('wishlist');
 
-      // Redirigir a la página de agradecimiento
+      
       navigate('/gracias');
     } else {
       alert('Por favor, completa todos los campos requeridos.');
@@ -98,7 +98,7 @@ const Checkout = () => {
               web *
             </label>
           </form>
-          {/* Botón manual */}
+         
           
         </div>
         <div className="order-summary">

@@ -1,6 +1,6 @@
 import React from 'react';
 import './SeccionDestacados.css';
-import { useNavigate } from 'react-router-dom'; // Importar hook para redireccionar
+import { useNavigate } from 'react-router-dom'; 
 
 const productos = [
   {
@@ -10,7 +10,7 @@ const productos = [
     
     boton: "Ver Modelos",
     ruta: "/compromiso",
-    colorFondo: "#ffffff" // Blanco
+    colorFondo: "#ffffff" 
   },
   {
     titulo: "Aros de Matrimonio",
@@ -19,7 +19,7 @@ const productos = [
     
     boton: "Ver Modelos",
     ruta: "/aros-de-matrimonio",
-    colorFondo: "#f8f3e9" // Color crema
+    colorFondo: "#f8f3e9" 
   },
   {
     titulo: "Anillo de Promesa",
@@ -28,7 +28,7 @@ const productos = [
     
     boton: "Ver Modelos",
     ruta: "/anillo-de-promesa",
-    colorFondo: "#ffffff" // Blanco
+    colorFondo: "#ffffff"
   },
   {
     titulo: "Alianzas de Amor",
@@ -37,12 +37,12 @@ const productos = [
     imagen2: "ruta_alianzas2.jpg",
     boton: "Ver Modelos",
     ruta: "/alianzas-de-amor",
-    colorFondo: "#f8f3e9" // Color crema
+    colorFondo: "#f8f3e9" 
   },
 ];
 
 const SeccionDestacados = () => {
-  const navigate = useNavigate(); // Hook para navegación
+  const navigate = useNavigate(); 
 
   return (
     <section className="seccion-destacados">
@@ -50,7 +50,7 @@ const SeccionDestacados = () => {
         <div
   key={index}
   className={`destacado ${index % 2 !== 0 ? "reversa" : ""}`}
-  style={{ backgroundColor: producto.colorFondo }} // Fondo dinámico
+  style={{ backgroundColor: producto.colorFondo }} 
 >
   <div className="imagenes">
     <img src={producto.imagen1} alt={producto.titulo} />

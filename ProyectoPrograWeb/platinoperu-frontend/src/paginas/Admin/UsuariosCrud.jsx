@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const UsuariosCrud = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [formData, setFormData] = useState({});
-  const [editMode, setEditMode] = useState(false); // Controla si estamos en modo edición
-  const [editId, setEditId] = useState(null); // Guarda el ID del usuario que se está editando
+  const [editMode, setEditMode] = useState(false); 
+  const [editId, setEditId] = useState(null); 
 
   useEffect(() => {
     fetchUsuarios();
@@ -24,24 +24,24 @@ const UsuariosCrud = () => {
     e.preventDefault();
     try {
       if (editMode) {
-        // Si estamos en modo edición, hacemos un PUT
+        
         await fetch(`http://localhost:4000/admin/usuarios/${editId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         });
-        setEditMode(false); // Salimos del modo edición
+        setEditMode(false); 
         setEditId(null);
       } else {
-        // Si no estamos en modo edición, hacemos un POST
+        
         await fetch('http://localhost:4000/admin/usuarios', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         });
       }
-      fetchUsuarios(); // Recarga los usuarios después de agregar/editar
-      setFormData({}); // Resetea el formulario
+      fetchUsuarios(); 
+      setFormData({}); 
     } catch (error) {
       console.error('Error al guardar usuario:', error);
     }
@@ -52,7 +52,7 @@ const UsuariosCrud = () => {
       await fetch(`http://localhost:4000/admin/usuarios/${id}`, {
         method: 'DELETE',
       });
-      fetchUsuarios(); // Recarga los usuarios después de eliminar
+      fetchUsuarios(); 
     } catch (error) {
       console.error('Error al eliminar usuario:', error);
     }
@@ -64,7 +64,7 @@ const UsuariosCrud = () => {
       email: usuario.email,
     });
     setEditMode(true);
-    setEditId(usuario.id); // Guardamos el ID del usuario en edición
+    setEditId(usuario.id); 
   };
 
   return (
@@ -93,7 +93,7 @@ const UsuariosCrud = () => {
           placeholder="Contraseña"
           value={formData.password || ''}
           onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
-          required={!editMode} // Contraseña no requerida al editar
+          required={!editMode} 
         />
         <button type="submit">{editMode ? 'Actualizar Usuario' : 'Agregar Usuario'}</button>
         {editMode && (

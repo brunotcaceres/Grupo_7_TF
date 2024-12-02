@@ -9,19 +9,19 @@ import Breadcrumb from '../../componentes/Breadcrumb/Breadcrumb';
 import './Tienda.css';
 
 const handleWishlistClick = (producto) => {
-  // Obtén la wishlist actual desde localStorage
+  
   const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-  // Verifica si el producto ya está en la wishlist
+  
   const isInWishlist = wishlist.some((item) => item.id === producto.id);
   
   if (isInWishlist) {
-    // Si ya está, elimínalo de la wishlist
+    
     const updatedWishlist = wishlist.filter((item) => item.id !== producto.id);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
     alert(`${producto.nombre} eliminado de la lista de deseos.`);
   } else {
-    // Si no está, agrégalo a la wishlist
+    
     wishlist.push(producto);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     alert(`${producto.nombre} añadido a la lista de deseos.`);
@@ -70,12 +70,12 @@ const Tienda = () => {
         <div className="productos">
   {productos.map((producto) => (
     <div key={producto.id} className="producto-card">
-      {/* Imagen del producto */}
+      
       <div className="producto-imagen">
         <img src={producto.imagen} alt={producto.nombre} />
       </div>
 
-      {/* Botón de wishlist debajo de la imagen */}
+      
       <button
         className="wishlist-btn"
         onClick={() => handleWishlistClick(producto)}
@@ -83,7 +83,7 @@ const Tienda = () => {
         ❤️
       </button>
 
-      {/* Detalles del producto */}
+      
       <div className="producto-detalles">
         <h3>{producto.nombre}</h3>
         <p>Precio: ${producto.precio}</p>

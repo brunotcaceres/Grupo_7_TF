@@ -12,7 +12,7 @@ const AccountDashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Recuperar los datos del usuario desde localStorage
+    
     const storedUser = JSON.parse(localStorage.getItem('user')) || {};
     setUserData({
       id: storedUser.id || '',
@@ -53,10 +53,10 @@ const AccountDashboard = () => {
   };
 
   const handleLogout = () => {
-    // Eliminar los datos del usuario del localStorage
+    
     localStorage.removeItem('user');
     localStorage.removeItem('authToken');
-    // Redirigir a la página "/mi-cuenta"
+   
     navigate('/mi-cuenta');
   };
 
@@ -104,7 +104,7 @@ const AccountDashboard = () => {
 
         <button type="submit">Guardar Cambios</button>
       </form>
-      {/* Botón de Logout */}
+      
       <button onClick={handleLogout} className="logout-button">
         Cerrar Sesión
       </button>

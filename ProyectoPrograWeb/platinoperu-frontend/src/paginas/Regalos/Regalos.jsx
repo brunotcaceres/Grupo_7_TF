@@ -19,7 +19,7 @@ const Regalos = () => {
     { id: 2, nombre: 'Churumbela De Plata | Finite', precio: 450, imagen: '/product2.jpg' },
     { id: 3, nombre: 'Churumbela De Plata | Love You', precio: 550, imagen: '/product3.jpg' },
     { id: 4, nombre: 'Churumbela De Plata | Magical', precio: 400, imagen: '/product4.jpg' },
-    // Agrega los demás productos aquí...
+    
   ];
 
   return (
