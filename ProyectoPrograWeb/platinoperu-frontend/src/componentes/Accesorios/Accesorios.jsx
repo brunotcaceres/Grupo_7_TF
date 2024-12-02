@@ -18,7 +18,7 @@ const Accesorios = () => {
       { id: 2, name: 'Aretes De Plata | Peridot London', price: 'S/80', image: 'img/aretes2.jpg' },
       { id: 3, name: 'Aretes De Plata | Rosé Mini', price: 'S/50', image: 'img/aretes3.jpg' },
       { id: 4, name: 'Aretes De Plata | Dunia Maxi', price: 'S/65', image: 'img/aretes4.jpg' },
-      
+
     ],
     collares: [
       { id: 1, name: 'Collar De Plata | Delicado', price: 'S/120', image: 'img/collar1.jpg' },
@@ -52,21 +52,21 @@ const Accesorios = () => {
   const handleNext = () => {
     const maxIndex = Math.ceil(productosAMostrar.length / productosPorVista) - 1;
     setCurrentIndex(prev => {
-        const nextIndex = Math.min(prev + 1, maxIndex);
-        console.log("Moving to index:", nextIndex);
-        return nextIndex;
+      const nextIndex = Math.min(prev + 1, maxIndex);
+      console.log("Moving to index:", nextIndex);
+      return nextIndex;
     });
-};
+  };
 
-const handlePrev = () => {
+  const handlePrev = () => {
     setCurrentIndex(prev => {
-        const prevIndex = Math.max(prev - 1, 0);
-        console.log("Moving to index:", prevIndex);
-        return prevIndex;
+      const prevIndex = Math.max(prev - 1, 0);
+      console.log("Moving to index:", prevIndex);
+      return prevIndex;
     });
-};
+  };
 
-  
+
 
   return (
     <section className="accessories-section">
@@ -87,7 +87,7 @@ const handlePrev = () => {
       </div>
 
       <div className="carousel">
-      <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * (100 / productosPorVista)}%)`}}>
+        <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * (100 / productosPorVista)}%)` }}>
 
           {productosAMostrar.map((producto) => (
             <div className="product-card" key={producto.id}>

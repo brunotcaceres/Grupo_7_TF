@@ -23,6 +23,12 @@ h1 {
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(0,0,0,0.1);
   width: 100vw;
+  color: black;
+}
+h2 {
+  
+  border-bottom: 0;
+  
 }
 
 .contact-info {

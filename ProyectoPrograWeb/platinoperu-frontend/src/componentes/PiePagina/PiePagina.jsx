@@ -10,7 +10,7 @@ const PiePagina = () => {
           <li><a href="/mi-cuenta">Mi Cuenta</a></li>
           <li><a href="/wishlist">Favoritos</a></li>
           <li><a href="/cart">Mi Carrito</a></li>
-          <li><a href="/cart">Checkout</a></li>
+          <li><a href="/Checkout">Checkout</a></li>
           <li><a href="/mi-cuenta/register">Regístrate</a></li>
         </ul>
       </div>

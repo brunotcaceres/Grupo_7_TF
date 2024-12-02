@@ -32,7 +32,7 @@
 
   border-radius: 0;
   background-color: #ffffff;
- 
+  margin-top: 0;
   border: 0;
   cursor: pointer;
   color: black;
@@ -122,6 +122,7 @@
   padding: 10px;
   cursor: pointer;
   z-index: 5;
+  width: auto;
 }
 
 .carousel-prev {

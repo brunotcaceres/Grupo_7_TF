@@ -49,6 +49,7 @@ import AnilloCompromisoDiamanteMoissanita from '../paginas/AnilloCompromisoDiama
 import AMPlataLey950 from '../paginas/AMPlataLey950/AMPlataLey950';
 import AMPlataConOro18k from '../paginas/AMPlataConOro18k/AMPlataConOro18k';
 import AMOro18k from '../paginas/AMOro18k/AMOro18k.JSX';
+import Checkout from '../paginas/Checkout/checkout';
 // Importen otras páginas si es necesario
 
 function NavegadorApp() {
@@ -105,7 +106,7 @@ function NavegadorApp() {
         <Route path="/plataley950" element={<AMPlataLey950 />} />
         <Route path="/amoro18" element={<AMPlataConOro18k />} />
         <Route path="/AMoro18k" element={<AMOro18k />} />
-        
+        <Route path="/Checkout" element={<Checkout/>}/>
 
 
         {/* Agreguen otras rutas si es necesario */}
