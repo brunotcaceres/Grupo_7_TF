@@ -17,7 +17,9 @@
   height: 300px;
   margin-bottom: 20px; 
 }
-
+.hero-title{
+  color: white;
+}
 .rotating-text {
   position: sticky;
   width: 100%;
@@ -48,7 +50,7 @@
   font-size: 1.5rem;
   margin: 20px 0; 
   font-family: 'Playfair Display', serif;
-
+  border-bottom: 0;
 }
 
 .heart-icon {
