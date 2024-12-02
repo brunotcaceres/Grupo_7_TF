@@ -8,6 +8,26 @@ import PiePagina from '../../componentes/PiePagina/PiePagina';
 import Breadcrumb from '../../componentes/Breadcrumb/Breadcrumb';
 import './Tienda.css';
 
+const handleWishlistClick = (producto) => {
+  // Obtén la wishlist actual desde localStorage
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  // Verifica si el producto ya está en la wishlist
+  const isInWishlist = wishlist.some((item) => item.id === producto.id);
+  
+  if (isInWishlist) {
+    // Si ya está, elimínalo de la wishlist
+    const updatedWishlist = wishlist.filter((item) => item.id !== producto.id);
+    localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+    alert(`${producto.nombre} eliminado de la lista de deseos.`);
+  } else {
+    // Si no está, agrégalo a la wishlist
+    wishlist.push(producto);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    alert(`${producto.nombre} añadido a la lista de deseos.`);
+  }
+};
+
 const Tienda = () => {
     const categorias = [
       { nombre: 'Matrimonio', icono: '/img/shop/A1-100x100.png', link: '/matrimonio' },
