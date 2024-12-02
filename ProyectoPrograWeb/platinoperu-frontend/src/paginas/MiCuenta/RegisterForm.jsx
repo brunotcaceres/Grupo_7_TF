@@ -12,36 +12,40 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !password) {
+    if (!username || !password || !email) {
         setError('Por favor, llena todos los campos.');
         return;
     }
 
     try {
-        const response = await fetch('http://localhost:4000/login', {
+        const response = await fetch('http://localhost:4000/admin/usuarios', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 nombreUsuario: username,
-                password: password
+                password: password,
+                email: email 
             }),
         });
 
         const data = await response.json();
 
         if (response.ok) {
-            
+          
             localStorage.setItem('user', JSON.stringify(data));
-            setError(''); 
+            setError('');
+            alert('Registro exitoso. Bienvenido!');
+            navigate('/'); 
         } else {
-            setError(data.error || 'Hubo un error al iniciar sesión.');
+            setError(data.error || 'Hubo un error al registrar el usuario.');
         }
     } catch (error) {
         setError('Error al conectar con el servidor.');
     }
 };
+
 
 
   return (

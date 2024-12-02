@@ -9,14 +9,18 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [shippingCost, setShippingCost] = useState(12); 
   const navigate = useNavigate();
+
   const handleCheckout = () => {
-    
     navigate('/checkout');
   };
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    setCartItems(storedCart);
+    const initializedCart = storedCart.map(item => ({
+      ...item,
+      quantity: Math.max(1, item.quantity || 1), // Asegurar que la cantidad mínima sea 1
+    }));
+    setCartItems(initializedCart);
   }, []);
 
   const handleQuantityChange = (id, change) => {
