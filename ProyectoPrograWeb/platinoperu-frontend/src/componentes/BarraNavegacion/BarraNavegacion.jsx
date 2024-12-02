@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import './BarraNavegacion.css';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +22,13 @@ const BarraNavegacion = () => {
     matrimonioDiseno: true,
     matrimonioDecorativo: true,
   });
+  const [usuarioAutenticado, setUsuarioAutenticado] = useState(null);
+
+  useEffect(() => {
+    // Check for user authentication state in localStorage
+    const user = JSON.parse(localStorage.getItem('user'));
+    setUsuarioAutenticado(user);
+  }, []);
 
   const manejarMenu = (menu) => {
     setMenuActivo(menuActivo === menu ? '' : menu);
@@ -301,7 +309,17 @@ const BarraNavegacion = () => {
       <div className="iconos">
         <i className="fa fa-search"></i>
         <nav>
-          <Link to="/mi-cuenta"><i className="fa fa-user"></i></Link>
+          {usuarioAutenticado ? (
+            // Enlace dinámico a Dashboard si el usuario está autenticado
+            <Link to="/mi-cuenta/dashboard">
+              <i className="fa fa-user"></i>
+            </Link>
+          ) : (
+            // Enlace a Mi Cuenta si no está autenticado
+            <Link to="/mi-cuenta">
+              <i className="fa fa-user"></i>
+            </Link>
+          )}
         </nav>
         <nav>
           <Link to="/wishlist"><i className="fa fa-heart"></i></Link>

@@ -1,43 +1,66 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './MiCuenta.css';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Hook para redireccionar
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+  
+    // Verificar que los campos no estén vacíos
+    if (!username || !password) {
+      setError('Por favor, completa todos los campos.');
+      return;
+    }
+  
+    console.log('Datos enviados:', { username, password });
+  
     try {
       const response = await fetch('http://localhost:4000/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        // Login successful, handle the login state (e.g., redirect to the dashboard)
-        console.log('Login successful', data);
+  
+      // Verificar si el servidor responde con JSON
+      const contentType = response.headers.get('Content-Type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await response.json();
+        if (response.ok) {
+          console.log('Inicio de sesión exitoso:', data);
+  
+          // Almacenar información del usuario si es necesario
+          localStorage.setItem('user', JSON.stringify(data.user));
+  
+          // Redirigir al usuario a la ruta "/inicio"
+          navigate('/');
+        } else {
+          setError(data.error || 'Error al iniciar sesión.');
+        }
       } else {
-        // Login failed, show error message
-        setError(data.error);
+        const text = await response.text();
+        setError(`Respuesta inesperada del servidor: ${text}`);
       }
     } catch (error) {
-      setError('Error en la conexión con el servidor.');
+      console.error('Error en la conexión con el servidor:', error);
+      setError('No se pudo conectar con el servidor. Inténtalo más tarde.');
     }
   };
+  
+  
+  
+  
+  
 
   return (
     <div className="mi-cuenta-container">
       <h2>Acceder</h2>
       <form className="mi-cuenta-form" onSubmit={handleSubmit}>
-        <label htmlFor="username">Nombre de usuario o correo electrónico *</label>
+        <label htmlFor="username">Nombre de usuario*</label>
         <input 
           type="text" 
           id="username" 

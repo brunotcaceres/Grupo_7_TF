@@ -1,6 +1,8 @@
 .ordenamiento {
-    display: inline-block;
+    display: flex;
     position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   .ordenamiento select {

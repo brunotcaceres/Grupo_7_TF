@@ -12,36 +12,37 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !username || !password) {
-      setError('Por favor, llena todos los campos.');
-      return;
+    if (!username || !password) {
+        setError('Por favor, llena todos los campos.');
+        return;
     }
 
     try {
-      const response = await fetch('http://localhost:4000/admin/usuarios', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          nombreUsuario: username,
-          password: password
-        }),
-      });
+        const response = await fetch('http://localhost:4000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nombreUsuario: username,
+                password: password
+            }),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (response.ok) {
-        localStorage.setItem('user', JSON.stringify(data));
-        navigate('/');
-      } else {
-        setError(data.error || 'Hubo un error al crear la cuenta.');
-      }
+        if (response.ok) {
+            // Guardar usuario en localStorage
+            localStorage.setItem('user', JSON.stringify(data));
+            setError(''); // Limpiar errores previos si los hay
+        } else {
+            setError(data.error || 'Hubo un error al iniciar sesión.');
+        }
     } catch (error) {
-      setError('Error al conectar con el servidor.');
+        setError('Error al conectar con el servidor.');
     }
-  };
+};
+
 
   return (
     <div className="mi-cuenta-container">
