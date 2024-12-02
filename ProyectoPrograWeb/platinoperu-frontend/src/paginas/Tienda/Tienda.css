@@ -103,7 +103,7 @@
     border: none; /* Sin borde */
     font-size: 20px; /* Tamaño del ícono */
     cursor: pointer; /* Manito al hacer hover */
-    color: red; /* Color del corazón */
+    
     padding: 0; /* Sin padding */
     transition: transform 0.2s ease; /* Efecto sutil al hacer hover */
   }
@@ -157,4 +157,27 @@
     background-color: #333;
     color: #fff;
   }
-  
+  .remove-btn,
+.add-to-cart-btn {
+  display: block;
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.add-to-cart-btn {
+  background: #4caf50; /* Botón verde para añadir al carrito */
+}
+
+.add-to-cart-btn:hover {
+  background: #388e3c;
+}
+
+.remove-btn:hover {
+  background: #e60000;
+}

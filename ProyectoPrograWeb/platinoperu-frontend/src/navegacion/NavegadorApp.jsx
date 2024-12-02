@@ -50,6 +50,7 @@ import AMPlataLey950 from '../paginas/AMPlataLey950/AMPlataLey950';
 import AMPlataConOro18k from '../paginas/AMPlataConOro18k/AMPlataConOro18k';
 import AMOro18k from '../paginas/AMOro18k/AMOro18k.JSX';
 import Checkout from '../paginas/Checkout/checkout';
+import ThankYou from '../paginas/Gracias/ThankYou';
 // Importen otras páginas si es necesario
 
 function NavegadorApp() {
@@ -58,7 +59,7 @@ function NavegadorApp() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/admin" element={<AdminPanel />} />
-        
+        <Route path="/gracias" element={<ThankYou />} />
         <Route path="/mi-cuenta/*" element={<MiCuenta />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />

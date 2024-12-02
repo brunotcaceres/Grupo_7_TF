@@ -1,52 +1,93 @@
 .cart-container {
-   
-  text-align: center;
-  
-  font-family: 'Arial', sans-serif;
-  background-color: white;
-  color: black;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.cart-items {
+  flex: 2;
+}
+
+.cart-item {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 300px;
   height: auto;
-  
-  }
-  
-  .cart-header h2 {
-    border-bottom: 2px solid rgba(0,0,0,0.1);
-    font-size: 3rem;
-    position: relative;
-  }
-  
-  .cart-content {
-    margin: 40px;
-    
-    margin-top: 80px;
-  }
-  
-  .cart-empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cart-empty img {
-    width: 150px;
-    margin-bottom: 20px;
-  }
-  
-  .cart-empty p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .cart-empty button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cart-empty button:hover {
-    background-color: #555;
-  }
-  
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-quantity button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.total-row {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  display: block;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.checkout-btn:hover {
+  background-color: #388e3c;
+}
+
+.shipping-options label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.shipping-options input {
+  margin-right: 10px;
+}
